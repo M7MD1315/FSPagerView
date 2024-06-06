@@ -1,15 +1,12 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.2
 import PackageDescription
 
 let package = Package(
     name: "FSPagerView",
-    platforms: [
-        .iOS(.v9)
-    ],
     products: [
-        .library(name: "FSPagerView", targets: ["FSPagerView"]),
+        .library(name: "FSPagerView", type: .dynamic, targets: ["FSPagerView"])
     ],
     targets: [
-        .target(name: "FSPagerView", path: "Sources", exclude: ["FSPagerViewObjcCompat.h", "FSPagerViewObjcCompat.m"]),
+        .target(name: "FSPagerView", dependencies: [])
     ]
 )
